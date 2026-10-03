@@ -56,7 +56,7 @@ function App() {
   const dispatch = useDispatch();
   const visibleStudents = items.filter(student => Object.values(student).some(value => normalizeSearch(value).includes(normalizeSearch(search.trim()))));
   return <main className="page">
-    <h1>React Form - validation</h1>
+    <h1>Bài tập React Form</h1>
     <ConnectedForm />
     <div className="search-row"><label htmlFor="search">Tìm kiếm sinh viên</label><div className="search-control"><input id="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Nhập mã SV, họ tên, số điện thoại hoặc email" />{search && <button type="button" onClick={() => setSearch('')} aria-label="Xóa tìm kiếm">×</button>}</div></div>
     <div className="table-scroll"><table>
